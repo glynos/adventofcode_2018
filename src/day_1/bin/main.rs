@@ -10,13 +10,15 @@ fn main() {
     file.read_to_string(&mut contents)
         .expect("something went wrong reading the file");
 
+    let values: Vec<i64> = contents.split_whitespace().map(
+        |value| value.parse::<i64>().unwrap()).collect();
+
     let mut frequency: i64 = 0;
-    let values: Vec<&str> = contents.split_whitespace().collect();
     let mut frequencies = HashSet::new();
     let mut frequency_repeated = false;
     while !frequency_repeated {
         for value in &values {
-            frequency += value.parse::<i64>().unwrap();
+            frequency += value;
             if frequencies.contains(&frequency) {
                 frequency_repeated = true;
                 break;
