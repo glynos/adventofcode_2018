@@ -8,3 +8,7 @@ authors = ["Glyn Matthews <glyn.matthews@gmail.com>"]
 [[bin]]
 name = "day_1"
 path = "src/day_1/bin/main.rs"
+
+[[bin]]
+name = "day_2"
+path = "src/day_2/bin/main.rs"

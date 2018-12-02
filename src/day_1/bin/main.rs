@@ -3,7 +3,7 @@ use std::io::prelude::*;
 use std::collections::HashSet;
 
 fn main() {
-    let filename = "input.txt";
+    let filename = "src/day_1/input.txt";
     let mut file = File::open(filename).expect("file not found");
 
     let mut contents = String::new();
